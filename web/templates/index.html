@@ -1,7 +1,87 @@
 <!doctype html>
+<head>
 <title>Hello from Flask</title>
-{% if name %}
-  <h1>Hello {{ name }}!</h1>
-{% else %}
-  <h1>Hello, World!</h1>
-{% endif %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+<div class=code-win>
+	<div id=code-menu> 
+			<div class=dropdown>
+			<a href=# onclick="$('#file-menu').show()">File</a>
+			<div id=file-menu>
+				<a href=#>Save</a>
+				<a href=#>Save As...</a>
+				<a href=#>Export...</a>
+			</div>
+		</div>
+	</div>
+	<textarea id=code-area class=boxsizingBorder></textarea>
+	<script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+</div>
+
+
+<div class=nav-panel>
+	<ul class=nav>
+	<li><h1>BOOT</h1></li>
+	<li><h1>SUBROUTINES</h1>
+		<ul>
+		<li>look for pen</li>
+		<li>sense a thing</li>
+		<li>add new</li>
+		</ul>
+	</li>
+	<li><h1>END AFFECTORS</h1>
+		<ul>
+		<li>pencil</li>
+		<li>grabber</li>
+		<li>probe</li>
+		<li>pencil</li>
+		<li>grabber</li>
+		<li>probe</li>
+		<li>pencil</li>
+		<li>grabber</li>
+		<li>probe</li>
+		<li>pencil</li>
+		<li>grabber</li>
+		<li>probe</li>
+		<li>pencil</li>
+		<li>grabber</li>
+		<li>probe</li>
+		<li>pencil</li>
+		<li>grabber</li>
+		<li>probe</li>
+		<li>pencil</li>
+		<li>grabber</li>
+		<li>probe</li>
+		<li>pencil</li>
+		<li>grabber</li>
+		<li>probe</li>
+		<li>add new</li>
+		</ul>
+	</li>
+	</ul>
+</div>
+
+
+<div class=status-bar>
+
+	<span id=current-pos>
+		A: <span id=apos>--</span>
+		B: <span id=bpos>--</span>
+		C: <span id=cpos>--</span>
+		X: <span id=xpos>--</span>
+		Y: <span id=ypos>--</span>
+		Z: <span id=zpos>--</span>
+	</span>
+
+</div>
+
+
+<div class=shortcut-bar>
+
+
+</div>
+</body>

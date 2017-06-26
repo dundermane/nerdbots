@@ -1,0 +1,163 @@
+body {
+	background-color: black;
+	color: #0F0;
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+div {
+
+	border: solid #0F0 2px;
+
+}
+
+a {
+	text-decoration: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+
+}
+
+.boxsizingBorder {
+	border: none;
+	width: 100%;
+	min-height: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.code-win {
+
+	position: fixed;
+	left: 205px;
+	height: calc(100% - 50px);
+	width: calc(100% - 270px);
+
+}
+
+#code-menu{
+	display: block;
+	border: none;
+	width: 100%;
+	background-color: #0F0;
+	color: black;
+}
+
+.dropdown {
+
+	position: relative;
+	display: inline-block;
+	width: 15ch;
+	background-color: black;
+	text-decoration: none;
+}
+
+.dropdown > a {
+	display: block;
+	background-color: #0F0;
+	padding-left: 4px;
+
+}
+
+.dropdown div{
+	position: absolute;
+	display: none;
+	width: 15ch;
+	top: calc(1em+ 2px);
+	color: #0F0;
+	z-index: 1;
+	border: solid #0F0 2px;
+}
+
+.dropdown div a {
+	display: block;
+	background-color: #000;
+
+
+}
+
+
+.code-win textarea {
+	margin-top: 10px;
+	min-height: calc(100% - 40px);
+	color: red;
+	overflow-y: scroll;
+	background-color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	padding: 4px;
+	resize: none;
+
+}
+
+.nav-panel{
+	
+	position: fixed;
+	left: 5px;
+	height: calc(100% - 50px);
+	width: 195px;
+	overflow-y: scroll;
+
+}
+
+
+.nav li ul li {
+
+	padding: 0;
+	list-style-type: circle;
+
+}
+
+.nav li ul {
+	margin-left: 10px;
+	padding-left: 10px;
+}
+
+.nav li h1{
+	font-size: inherit;
+	color: black;
+	background-color: #0F0;
+	margin: 2px;
+	padding: 4px;
+}
+
+.nav li {
+	list-style-type: none;
+
+}
+
+
+.nav {
+	color: #0F0;
+	background-color: black;
+	margin: 0;
+	padding: 3px;
+}
+
+
+.status-bar{
+	position: fixed;
+	bottom: 5px;
+	left: 5px;
+	width: calc(100% - 13px);
+	height: 25px;
+
+}
+
+#current-pos {
+
+	display: block;
+	float: right;
+	margin-right: 10px;
+
+}
+
+.shortcut-bar {
+
+	position: fixed;
+	right: 5px;
+	width: 50px;
+	height: calc(100% - 50px);
+
+}
