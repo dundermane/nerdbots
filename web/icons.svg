@@ -30,7 +30,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="7.9195959"
      inkscape:cx="52.480158"
-     inkscape:cy="1062.4982"
+     inkscape:cy="1027.1429"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -62,8 +62,9 @@
        height="10.961308"
        x="9.4494047"
        y="10.494047"
-       inkscape:export-xdpi="602.47998"
-       inkscape:export-ydpi="602.47998" />
+       inkscape:export-xdpi="111.23"
+       inkscape:export-ydpi="111.23"
+       inkscape:export-filename="/home/mane/nerdbots/web/static/img/move_here.png" />
     <rect
        style="fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.80399996;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4487"
@@ -71,16 +72,18 @@
        height="1.4174107"
        x="11.24479"
        y="15.265995"
-       inkscape:export-xdpi="602.47998"
-       inkscape:export-ydpi="602.47998" />
+       inkscape:export-xdpi="111.23"
+       inkscape:export-ydpi="111.23"
+       inkscape:export-filename="/home/mane/nerdbots/web/static/img/move_here.png" />
     <circle
        style="fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:1.08814454;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4489"
        cx="14.930058"
        cy="15.974701"
        r="1.9902809"
-       inkscape:export-xdpi="602.47998"
-       inkscape:export-ydpi="602.47998" />
+       inkscape:export-xdpi="111.23"
+       inkscape:export-ydpi="111.23"
+       inkscape:export-filename="/home/mane/nerdbots/web/static/img/move_here.png" />
     <rect
        y="-15.638763"
        x="12.289433"
@@ -89,13 +92,17 @@
        id="rect4491"
        style="fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.80399996;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        transform="rotate(90)"
-       inkscape:export-xdpi="602.47998"
-       inkscape:export-ydpi="602.47998" />
+       inkscape:export-xdpi="111.23"
+       inkscape:export-ydpi="111.23"
+       inkscape:export-filename="/home/mane/nerdbots/web/static/img/move_here.png" />
     <path
        inkscape:connector-curvature="0"
        id="path4500"
-       d="m 17.821016,23.011338 -1.319435,2.285328 h 2.541372 z"
-       style="fill:#00ff00;stroke:none;stroke-width:0.18975013px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+       d="M 17.659783,19.917866 16.635216,18.143265 H 18.60864 Z"
+       style="fill:#00ff00;stroke:none;stroke-width:0.14734463px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="/home/mane/nerdbots/web/static/img/move_here.png"
+       inkscape:export-xdpi="111.23"
+       inkscape:export-ydpi="111.23" />
     <rect
        y="10.842052"
        x="9.7974091"
@@ -104,7 +111,51 @@
        id="rect4498"
        style="fill:none;fill-opacity:1;stroke:#00ff00;stroke-width:0.53567984;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.21407904,1.07135968;stroke-dashoffset:5.3567984;stroke-opacity:1"
        ry="0.8504464"
-       inkscape:export-xdpi="602.47998"
-       inkscape:export-ydpi="602.47998" />
+       inkscape:export-xdpi="111.23"
+       inkscape:export-ydpi="111.23"
+       inkscape:export-filename="/home/mane/nerdbots/web/static/img/move_here.png" />
+    <rect
+       inkscape:export-filename="/home/mane/nerdbots/web/static/img/pause.png"
+       inkscape:export-ydpi="111.23"
+       inkscape:export-xdpi="111.23"
+       y="26.369047"
+       x="9.4494047"
+       height="10.961308"
+       width="10.961308"
+       id="rect4525"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.07199991;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       inkscape:export-filename="/home/mane/nerdbots/web/static/img/pause.png"
+       inkscape:export-ydpi="111.23"
+       inkscape:export-xdpi="111.23"
+       transform="rotate(90)"
+       style="fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.9515413;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4531"
+       width="7.3705359"
+       height="1.9853585"
+       x="28.164431"
+       y="-14.023228" />
+    <rect
+       inkscape:export-filename="/home/mane/nerdbots/web/static/img/pause.png"
+       inkscape:export-ydpi="111.23"
+       inkscape:export-xdpi="111.23"
+       ry="0.8504464"
+       style="fill:none;fill-opacity:1;stroke:#00ff00;stroke-width:0.53567982;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.21407904, 1.07135968;stroke-dashoffset:5.35679817;stroke-opacity:1"
+       id="rect4535"
+       width="10.265299"
+       height="10.265299"
+       x="9.7974091"
+       y="26.717051" />
+    <rect
+       y="-17.727392"
+       x="28.164431"
+       height="1.9853585"
+       width="7.3705359"
+       id="rect4537"
+       style="fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.9515413;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       transform="rotate(90)"
+       inkscape:export-xdpi="111.23"
+       inkscape:export-ydpi="111.23"
+       inkscape:export-filename="/home/mane/nerdbots/web/static/img/pause.png" />
   </g>
 </svg>

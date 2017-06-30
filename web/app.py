@@ -13,3 +13,7 @@ def index():
 @app.route('/ldata', methods=['GET'])
 def ldata():
     return jsonify(get_last_movement_data(23))
+
+@app.route('/p5box')
+def p5box():
+    return render_template('p5sandbox.html')
