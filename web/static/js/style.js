@@ -15,13 +15,13 @@ $('.dropdown').mouseleave( function() {
 
 
 $('.inverseHover').mouseover( function() {
-	console.log('here');
+
 	$(this).css('background-color', '#0F0');
 	$(this).css('color', '#000');
 
 });
 
-$('.dropdown div a').mouseout( function() {
+$('.inverseHover').mouseout( function() {
 
 	$(this).css('background-color', '#000');
 	$(this).css('color', '#0F0');

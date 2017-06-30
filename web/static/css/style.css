@@ -15,6 +15,7 @@ a {
 	font-family: inherit;
 	font-size: inherit;
 	color: inherit;
+	padding-left: 10px;
 
 }
 
@@ -36,12 +37,15 @@ a {
 
 }
 
-#code-menu{
+.menu{
 	display: block;
 	border: none;
 	width: 100%;
 	background-color: #0F0;
 	color: black;
+	font-size: inherit;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
 }
 
 .dropdown {
@@ -74,6 +78,13 @@ a {
 	display: block;
 	background-color: #000;
 
+
+}
+
+.inverseHover {
+
+	display: block;
+	background-color: #000;
 
 }
 
