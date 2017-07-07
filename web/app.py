@@ -17,3 +17,6 @@ def ldata():
 @app.route('/p5box')
 def p5box():
     return render_template('p5sandbox.html')
+
+if __name__=='__main__':
+    app.run()
