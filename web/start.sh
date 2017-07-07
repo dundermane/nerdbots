@@ -2,3 +2,5 @@
 
 wall flaskStarting now
 python app.py
+echo hello
+
