@@ -1,6 +1,8 @@
 
 def get_last_movement_data( time ):
 
+    from dblayer import couch
+    c = couch()
     print (time)
 
     fake = [ { 'time': 120012, 'q0': 201 , 'q1':130 , 'q2':100 , 'q3':80 , 'q4':200 , 'q5': 120},
