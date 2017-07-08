@@ -24,6 +24,7 @@ if __name__=='__main__':
     tdate = datetime.date.today()
     f = open("logs/{0}".format(tdate), 'w')
     sys.stdout = f
+    sys.stderr = f
     
     app.run(host="0.0.0.0")
 
