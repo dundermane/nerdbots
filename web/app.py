@@ -2,7 +2,6 @@
 
 from flask import Flask, render_template, url_for, request, jsonify
 from planner import *
-import datetime
 
 app = Flask(__name__)
 
@@ -22,9 +21,10 @@ def p5box():
 
 if __name__=='__main__':
 
-    import sys
+    import os, sys, datetime
     tdate = datetime.date.today()
-    f = open("logs/{0}".format(tdate), 'w')
+    thisDir = os.path.dirname(os.path.realpath(__file__))
+    f = open("{0}/logs/{1}".format(thisDir,tdate), 'w')
     sys.stdout = f
     sys.stderr = f
     
