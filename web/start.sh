@@ -1,7 +1,6 @@
 #/bin/bash
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-wall "$0"
+DIR="$( cd "$( dirname "$0" )" && pwd )"
 pkill -9 -f "python $DIR/app.py"
 python $DIR/app.py &
 
