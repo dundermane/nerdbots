@@ -2,3 +2,4 @@
 
 
 python app.py
+echo hello
