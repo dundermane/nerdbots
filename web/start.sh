@@ -3,4 +3,4 @@
 pkill -9 -f "python app.py"
 python app.py &
 
-return 1
+exit 1
