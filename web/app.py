@@ -19,4 +19,12 @@ def p5box():
     return render_template('p5sandbox.html')
 
 if __name__=='__main__':
+
+    import sys
+    tdate = datetime.date.today()
+    f = open("logs/{1}".format(tdate), 'w')
+    sys.stdout = f
+    
     app.run(host="0.0.0.0")
+
+    f.close()
