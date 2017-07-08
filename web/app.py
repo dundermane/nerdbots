@@ -22,7 +22,8 @@ def p5box():
 if __name__=='__main__':
 
     import os, sys, datetime
-    tdate = datetime.date.now.isoformat()
+    ddate = datetime.datetime.now()
+    tdate = ddate.isoformat().replace(".","").replace("-","").replace(":","")
     thisDir = os.path.dirname(os.path.realpath(__file__))
     f = open("{0}/logs/{1}".format(thisDir,tdate), 'w')
     sys.stdout = f
