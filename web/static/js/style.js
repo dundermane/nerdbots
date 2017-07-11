@@ -13,7 +13,6 @@ $('.dropdown').mouseleave( function() {
 
 });
 
-
 $('.inverseHover').mouseover( function() {
 
 	$(this).css('background-color', '#0F0');
