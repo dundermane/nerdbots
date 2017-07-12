@@ -10,7 +10,6 @@ def init():
 
     prescale = ( 25000000 / ( 4096 * 50 ) ) - 1
     bus.write_byte_data(address, 0xFE, prescale)
-    
 
     modebyte = bus.read_byte_data(address, 0)
     if (modebyte & 0b10000000) == 0b10000000:
@@ -24,17 +23,20 @@ def init():
 	print "Startup Failed"
         init()
 
+
 def setpwm( pos , value ):
     if pos in range(0,15):
         onL = 0x00
         onH = 0x00
         offL = value & 0b11111111
         offH = value >> 8
-        bus.write_byte_data(address, 6 + (4 * pos), onL)
-        bus.write_byte_data(address, 7 + (4 * pos), onH) 
-        bus.write_byte_data(address, 8 + (4 * pos), offL) 
-        bus.write_byte_data(address, 9 + (4 * pos), offH) 
-        
+        bus.write_byte_data(address, 6 + (4 * pos) , onL)
+        bus.write_byte_data(address, 7 + (4 * pos) , onH) 
+        bus.write_byte_data(address, 8 + (4 * pos) , offL) 
+        bus.write_byte_data(address, 9 + (4 * pos) , offH) 
+        lsb = bus.read_byte_data(address, 8)
+	msb = bus.read_byte_data(address, 9)
+	print (msb << 8) + lsb        
 
 counter = 0
 ascending = 1
@@ -42,15 +44,16 @@ init()
 
 while True:
     setpwm(0, counter)
-    if ascending and counter >= 4095:
+
+    if ascending and counter >= 500:
         ascending = 0
-        counter -= 10
+        counter -= 1
     elif ascending:
-        counter +=10
+        counter +=1
     elif not ascending and counter <= 0:
         ascending = 1
-        counter += 10
+        counter += 1
     elif not ascending:
-        counter -= 10
+        counter -= 1
     
     time.sleep(0.005)
