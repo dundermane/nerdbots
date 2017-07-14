@@ -5,7 +5,6 @@ bus = smbus.SMBus(1)
 address = 0x40
 frequency = 50
 
-
 def init():
     sleepbyte = 0b00010000
     bus.write_byte_data(address, 0, sleepbyte)
@@ -26,44 +25,56 @@ def init():
 	print "Startup Failed"
         init()
 
-def todiv( degree, lowdegree, highdegree, lowtime, hightime ):
-    if (degree >= lowdegree and degree <= highdegree):
-        refresh = 1 / frequency
+def todiv(servo):
+    if (servo.curangle >= servo.minangle and servo.curangle <= servo.maxangle):
+        refresh = 1.000000000 / frequency
         timediv = refresh / 4096
-        angletime = (hightime - lowtime) / (highdegree - lowdegree) * (degree - lowdegree) + lowtime
-        bitvalue = round(angletime / timediv)
+        angletime = (servo.maxtime - servo.mintime) / (servo.maxangle - servo.minangle) * (servo.curangle - servo.minangle) + servo.mintime
+        bitvalue = int(round(angletime / timediv) - 1)
         return bitvalue
     
 
-def setpwm( pos , value ):
-    if pos in range(0,15):
+def setpwm(servo):
+    if servo.address in range(0,15):
         onL = 0x00
         onH = 0x00
-        offL = value & 0b11111111
-        offH = value >> 8
-        bus.write_byte_data(address, 6 + (4 * pos) , onL)
-        bus.write_byte_data(address, 7 + (4 * pos) , onH) 
-        bus.write_byte_data(address, 8 + (4 * pos) , offL) 
-        bus.write_byte_data(address, 9 + (4 * pos) , offH) 
-        lsb = bus.read_byte_data(address, 8)
-	msb = bus.read_byte_data(address, 9)
-	print (msb << 8) + lsb        
+        offL = servo.bit & 0b11111111
+        offH = servo.bit >> 8
+        bus.write_byte_data(address, 6 + (4 * servo.address) , onL)
+        bus.write_byte_data(address, 7 + (4 * servo.address) , onH) 
+        bus.write_byte_data(address, 8 + (4 * servo.address) , offL) 
+        bus.write_byte_data(address, 9 + (4 * servo.address) , offH) 
+  
+class servo:
+    def __init__(self, jointaddress, minangle, maxangle, mintime, maxtime):
+        self.address = jointaddress
+        self.minangle = minangle
+        self.maxangle = maxangle
+        self.mintime = mintime
+        self.maxtime = maxtime
+        self.curangle = 90
+        self.bit = todiv(self)
+        setpwm(self) 
 
-counter = 200
+    def update(self, angle):
+        self.curangle = angle
+        self.bit = todiv(self)
+        setpwm(self)      
+
+baseservo = servo(0, 10, 170, 0.00097656, 0.00244141)
+counter = 90
 ascending = 1
 init()
 
 while True:
-    setpwm(0, counter)
-    setpwm(1, counter)
-    setpwm(2, counter)
+    baseservo.update(counter)
 
-    if ascending and counter >= 500:
+    if ascending and counter >= 170:
         ascending = 0
         time.sleep(0.5)
     elif ascending:
         counter +=5
-    elif not ascending and counter <=200:
+    elif not ascending and counter <=10:
         ascending = 1
         time.sleep(0.5)
     elif not ascending:
