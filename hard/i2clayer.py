@@ -60,24 +60,3 @@ class servo:
         self.curangle = angle
         self.bit = todiv(self)
         setpwm(self)      
-
-baseservo = servo(0, 10, 170, 0.00097656, 0.00244141)
-counter = 90
-ascending = 1
-init()
-
-while True:
-    baseservo.update(counter)
-
-    if ascending and counter >= 170:
-        ascending = 0
-        time.sleep(0.5)
-    elif ascending:
-        counter +=5
-    elif not ascending and counter <=10:
-        ascending = 1
-        time.sleep(0.5)
-    elif not ascending:
-        counter -= 5
-    
-    
