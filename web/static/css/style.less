@@ -1,0 +1,265 @@
+
+@nav-width: 195px;
+@status-height: 25px;
+@title-height: 90px;
+@top-bar-height: 1.5em;
+
+
+#flex-column-container{
+
+	display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox; /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
+	display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	-ms-flex-direction: column;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+
+#flex-row-container{
+
+	display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox; /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
+	display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	-ms-flex-direction: row;
+	-moz-flex-direction: row;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	align-items: stetch;
+}
+
+#flex {
+
+	-webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-flex: 1; /* OLD - Firefox 19- */
+	-webkit-flex: 1; /* Chrome */
+	-ms-flex: 1; /* IE 10 */
+	flex: 1; /* NEW, */
+
+}
+
+body {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: black;
+	color: #0F0;
+	font-family: "Lucida Console", Monaco, monospace;
+	padding: 0;
+	margin: 8px;
+	#flex-column-container;
+}
+
+div {
+
+	border: solid #0F0 2px;
+	margin: 0;
+
+}
+
+
+
+.codetainer {
+	margin: 0;
+	padding: 0;
+	border: none;
+	#flex;
+	#flex-row-container;
+}
+
+a {
+	text-decoration: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	padding-left: 10px;
+
+}
+
+
+.code-win {
+
+	#flex;
+}
+
+
+.div-with-top-bar {
+	border-top-width: @top-bar-height;
+}
+
+.top-bar{
+	position: relative;
+	display: flex;
+	#flex-row-container;
+	justify-content: left;
+	align-items: center;
+	border: none;
+	margin: none;
+	padding: none;
+	height: @top-bar-height;
+	top: @top-bar-height * (-1);
+	color: black;
+	font-size: inherit;
+}
+
+.dropdown {
+
+	border: none;
+	text-decoration: none;
+	padding: 0 2px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+	vertical-align: middle;
+}
+
+.dropdown > a {
+	padding: 0 4px;
+	margin: auto;
+
+
+}
+
+.dropdown div{
+	position: absolute;
+	display: none;
+	width: 15ch;
+	top: @top-bar-height;
+	color: #0F0;
+	z-index: 1;
+	padding: 2px;
+	border: solid #0F0 2px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.dropdown div a {
+	display: block;
+	background-color: #000;
+
+
+}
+
+.inverseHover {
+
+	display: block;
+	background-color: #000;
+
+}
+
+
+.code-win textarea {
+	color: red;
+	overflow-y: scroll;
+	background-color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	padding: 4px;
+	resize: none;
+
+	border: none;
+	width: 100%;
+	min-height: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+	margin-top: @top-bar-height * (-1);
+
+}
+
+.nav-panel{
+	
+	left: 0; 
+	width: @nav-width;
+	overflow-y: scroll;
+
+}
+
+.nav li ul li:before{
+	content: '\2713';
+	margin: 0 1em;
+
+}
+
+.nav li ul li {
+	padding: 0;
+
+}
+
+
+.nav li ul {
+	margin-left: 10px;
+	padding-left: 10px;
+	list-style: none;
+}
+
+.nav li h1{
+	font-size: inherit;
+	color: black;
+	background-color: #0F0;
+	margin: 2px;
+	padding: 4px;
+}
+
+.nav li {
+	list-style-type: none;
+
+}
+
+
+.nav {
+	color: #0F0;
+	background-color: black;
+	margin: 0;
+	padding: 3px;
+}
+
+
+.status-bar{
+
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: @status-height;
+
+}
+
+#current-pos {
+
+	display: block;
+	float: right;
+	margin-right: 10px;
+
+}
+
+
+.shortcut-bar {
+
+	padding: 0;
+	width: 50px;
+	justify-content: flex-end;
+
+
+}
+
+.shortcut-bar a {
+	padding: 1px;
+
+}
+
+.title-bar {
+
+	margin-bottom: 2px;
+	padding: 5px;
+	height: @title-height;
+	width: auto;
+
+}
+

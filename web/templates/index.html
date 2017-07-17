@@ -8,63 +8,63 @@
 </head>
 
 <body>
-<div class=code-win>
-	<div class=menu> 
-			<div class=dropdown>
-			<a href=# onclick="$('#file-menu').show()">File</a>
-			<div id=file-menu>
-				<a class=inverseHover href=#>Save</a>
-				<a class=inverseHover href=#>Save As...</a>
-				<a class=inverseHover href=#>Export...</a>
+<div class=title-bar>
+	<h1><span id="projName">hello</span></h1>
+</div>
+
+<div class=codetainer>
+
+	<div class=nav-panel>
+		<ul class=nav>
+		<li><h1>ROBOT</h1>
+			<ul>
+			<li>Setup</li>
+			</ul>
+		</li>
+		<li><h1>SUBROUTINES</h1>
+			<ul>
+			<li><a class=inverseHover href=#>add new...</a></li>
+			</ul>
+		</li>
+		<li><h1>END AFFECTORS</h1>
+			<ul>
+			<li><a class=inverseHover href=#>add new...</a></li>
+			</ul>
+		</li>
+		</ul>
+	</div>
+
+	<div class="code-win div-with-top-bar">
+		<div class=top-bar> 
+				<div class=dropdown>
+				<a href=# >File</a>
+				<div id=file-menu>
+				</div>
 			</div>
 		</div>
+		<textarea id=code-area class=boxsizingBorder></textarea>
+
 	</div>
-	<textarea id=code-area class=boxsizingBorder></textarea>
+
+	<div class=shortcut-bar>
+
+		<div class=menu>
+			Tools
+		</div>
+		<a id=move href="#"><img src="{{ url_for('static', filename='img/move.png') }}" 
+		title="move" onclick="insertAtCaret('code-area', 'GA'); return false;"></img></a>
+
+		<a id=move href="#"><img src="{{ url_for('static', filename='img/move_here.png') }}" 
+		title="move here"></img></a>
+
+		<a id=move href="#"><img src="{{ url_for('static', filename='img/pause.png') }}" 
+		title="pause" id="pause"></img></a>
+
+		<script src="{{ url_for('static', filename='js/text-complete.js') }}"></script>	
+	</div>
+
+
 </div>
-
-
-<div class=nav-panel>
-	<ul class=nav>
-	<li><h1>BOOT</h1></li>
-	<li><h1>SUBROUTINES</h1>
-		<ul>
-		<li>look for pen</li>
-		<li>sense a thing</li>
-		<li>add new</li>
-		</ul>
-	</li>
-	<li><h1>END AFFECTORS</h1>
-		<ul>
-		<li><a class=inverseHover href=#>grabber</a></li>
-		<li><a class=inverseHover href=#>probe</a></li>
-		<li><a class=inverseHover href=#>pencil</a></li>
-		<li><a class=inverseHover href=#>grabber</a></li>
-		<li><a class=inverseHover href=#>probe</a></li>
-		<li><a class=inverseHover href=#>grabber</a></li>
-		<li><a class=inverseHover href=#>probe</a></li>
-		<li><a class=inverseHover href=#>pencil</a></li>
-		<li><a class=inverseHover href=#>grabber</a></li>
-		<li><a class=inverseHover href=#>probe</a></li>
-		<li><a class=inverseHover href=#>grabber</a></li>
-		<li><a class=inverseHover href=#>probe</a></li>
-		<li><a class=inverseHover href=#>pencil</a></li>
-		<li><a class=inverseHover href=#>grabber</a></li>
-		<li><a class=inverseHover href=#>probe</a></li>
-		<li><a class=inverseHover href=#>grabber</a></li>
-		<li><a class=inverseHover href=#>probe</a></li>
-		<li><a class=inverseHover href=#>pencil</a></li>
-		<li><a class=inverseHover href=#>grabber</a></li>
-		<li><a class=inverseHover href=#>probe</a></li>
-		<li><a class=inverseHover href=#>grabber</a></li>
-		<li><a class=inverseHover href=#>probe</a></li>
-		<li><a class=inverseHover href=#>pencil</a></li>
-		<li><a class=inverseHover href=#>grabber</a></li>
-		<li><a class=inverseHover href=#>probe</a></li>
-		</ul>
-	</li>
-	</ul>
-</div>
-
 
 <div class=status-bar>
 
@@ -79,15 +79,12 @@
 
 </div>
 
-
-<div class=shortcut-bar>
-
-	<div class=menu>
-		Tools
-	</div>
-		<a id=move href="#"><img src="{{ url_for('static', filename='img/move.png') }}" title="move"></img></a>
-		<a id=move href="#"><img src="{{ url_for('static', filename='img/move_here.png') }}" title="move here"></img></a>
-		<a id=move href="#"><img src="{{ url_for('static', filename='img/pause.png') }}" title="pause"></img></a>
+<div id=modal class=div-with-top-bar style="display:none">
+	<div id=modalTitle class=top-bar></div>
+	<form id=modalForm> </form>
 </div>
-<script src="{{ url_for('static', filename='js/style.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+<script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+
 </body>

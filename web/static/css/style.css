@@ -1,174 +1,262 @@
+#flex-column-container {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+#flex-row-container {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -ms-flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  align-items: stetch;
+}
+#flex {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;
+  /* OLD - Firefox 19- */
+  -webkit-flex: 1;
+  /* Chrome */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1;
+  /* NEW, */
+}
 body {
-	background-color: black;
-	color: #0F0;
-	font-family: "Lucida Console", Monaco, monospace;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  color: #0F0;
+  font-family: "Lucida Console", Monaco, monospace;
+  padding: 0;
+  margin: 8px;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
 }
-
 div {
-
-	border: solid #0F0 2px;
-
+  border: solid #0F0 2px;
+  margin: 0;
 }
-
+.codetainer {
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;
+  /* OLD - Firefox 19- */
+  -webkit-flex: 1;
+  /* Chrome */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1;
+  /* NEW, */
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -ms-flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  align-items: stetch;
+}
 a {
-	text-decoration: none;
-	font-family: inherit;
-	font-size: inherit;
-	color: inherit;
-	padding-left: 10px;
-
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  padding-left: 10px;
 }
-
-.boxsizingBorder {
-	border: none;
-	width: 100%;
-	min-height: 100%;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-}
-
 .code-win {
-
-	position: fixed;
-	left: 205px;
-	height: calc(100% - 50px);
-	width: calc(100% - 270px);
-
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;
+  /* OLD - Firefox 19- */
+  -webkit-flex: 1;
+  /* Chrome */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1;
+  /* NEW, */
 }
-
-.menu{
-	display: block;
-	border: none;
-	width: 100%;
-	background-color: #0F0;
-	color: black;
-	font-size: inherit;
-	margin-bottom: 5px;
-	padding-bottom: 5px;
+.div-with-top-bar {
+  border-top-width: 1.5em;
 }
-
+.top-bar {
+  position: relative;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -ms-flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  align-items: stetch;
+  justify-content: left;
+  align-items: center;
+  border: none;
+  margin: none;
+  padding: none;
+  height: 1.5em;
+  top: -1.5em;
+  color: black;
+  font-size: inherit;
+}
 .dropdown {
-
-	position: relative;
-	display: inline-block;
-	width: 15ch;
-	background-color: black;
-	text-decoration: none;
+  border: none;
+  text-decoration: none;
+  padding: 0 2px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
 }
-
 .dropdown > a {
-	display: block;
-	background-color: #0F0;
-	padding-left: 4px;
-
+  padding: 0 4px;
+  margin: auto;
 }
-
-.dropdown div{
-	position: absolute;
-	display: none;
-	width: 15ch;
-	top: calc(1em+ 2px);
-	color: #0F0;
-	z-index: 1;
-	border: solid #0F0 2px;
+.dropdown div {
+  position: absolute;
+  display: none;
+  width: 15ch;
+  top: 1.5em;
+  color: #0F0;
+  z-index: 1;
+  padding: 2px;
+  border: solid #0F0 2px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .dropdown div a {
-	display: block;
-	background-color: #000;
-
-
+  display: block;
+  background-color: #000;
 }
-
 .inverseHover {
-
-	display: block;
-	background-color: #000;
-
+  display: block;
+  background-color: #000;
 }
-
-
 .code-win textarea {
-	margin-top: 10px;
-	min-height: calc(100% - 40px);
-	color: red;
-	overflow-y: scroll;
-	background-color: inherit;
-	font-family: inherit;
-	font-size: inherit;
-	padding: 4px;
-	resize: none;
-
+  color: red;
+  overflow-y: scroll;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 4px;
+  resize: none;
+  border: none;
+  width: 100%;
+  min-height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: -1.5em;
 }
-
-.nav-panel{
-	
-	position: fixed;
-	left: 5px;
-	height: calc(100% - 50px);
-	width: 195px;
-	overflow-y: scroll;
-
+.nav-panel {
+  left: 0;
+  width: 195px;
+  overflow-y: scroll;
 }
-
-
+.nav li ul li:before {
+  content: '\2713';
+  margin: 0 1em;
+}
 .nav li ul li {
-
-	padding: 0;
-	list-style-type: circle;
-
+  padding: 0;
 }
-
 .nav li ul {
-	margin-left: 10px;
-	padding-left: 10px;
+  margin-left: 10px;
+  padding-left: 10px;
+  list-style: none;
 }
-
-.nav li h1{
-	font-size: inherit;
-	color: black;
-	background-color: #0F0;
-	margin: 2px;
-	padding: 4px;
+.nav li h1 {
+  font-size: inherit;
+  color: black;
+  background-color: #0F0;
+  margin: 2px;
+  padding: 4px;
 }
-
 .nav li {
-	list-style-type: none;
-
+  list-style-type: none;
 }
-
-
 .nav {
-	color: #0F0;
-	background-color: black;
-	margin: 0;
-	padding: 3px;
+  color: #0F0;
+  background-color: black;
+  margin: 0;
+  padding: 3px;
 }
-
-
-.status-bar{
-	position: fixed;
-	bottom: 5px;
-	left: 5px;
-	width: calc(100% - 13px);
-	height: 25px;
-
+.status-bar {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
 }
-
 #current-pos {
-
-	display: block;
-	float: right;
-	margin-right: 10px;
-
+  display: block;
+  float: right;
+  margin-right: 10px;
 }
-
 .shortcut-bar {
-
-	position: fixed;
-	right: 5px;
-	width: 50px;
-	height: calc(100% - 50px);
-
+  padding: 0;
+  width: 50px;
+  justify-content: flex-end;
+}
+.shortcut-bar a {
+  padding: 1px;
+}
+.title-bar {
+  margin-bottom: 2px;
+  padding: 5px;
+  height: 90px;
+  width: auto;
 }
