@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+import json
 from flask import Flask, render_template, url_for, request, jsonify
 from planner import *
 
@@ -14,6 +14,30 @@ def index():
 @app.route('/ldata', methods=['GET'])
 def ldata():
     return jsonify(get_last_movement_data(23))
+
+@app.route('/newproject', methods=['POST'])
+def newproject():
+    jsonobject = request.form
+    print (str(jsonobject))
+    for item in jsonobject:
+        print (str(item))
+    return jsonify(jsonobject)
+
+@app.route('/project', methods=['GET'])
+def loadproject():
+    name = request.args['name']
+    print (str(name))
+    with open( '{0}.json'.format(name) , 'r' ) as infile:
+        return infile.read()
+
+@app.route('/project', methods=['POST'])
+def saveproject():
+    print('here?')
+    name = request.form['name']
+    print (str(name))
+    with open( '{0}.json'.format(name) , 'w' ) as outfile:
+        json.dump(request.form, outfile)
+    return jsonify(name)
 
 @app.route('/p5box')
 def p5box():

@@ -1,15 +1,15 @@
 <!doctype html>
 <head>
-<title>Hello from Flask</title>
+<title>Robotic Choriography Planning Environment</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
 
 <script> $('.code-win').css('background-color','blue');</script>
 </head>
 
 <body>
 <div class=title-bar>
-	<h1><span id="projName">hello</span></h1>
+	<h1><span id="projName">Robotic Choriography Planning Environment</span></h1>
 </div>
 
 <div class=codetainer>
@@ -17,17 +17,17 @@
 	<div class=nav-panel>
 		<ul class=nav>
 		<li><h1>ROBOT</h1>
-			<ul>
-			<li>Setup</li>
+			<ul id=rootNavList>
+			<li><a class=inverseHover href=#>setup</a></li>
 			</ul>
 		</li>
 		<li><h1>SUBROUTINES</h1>
-			<ul>
+			<ul id=subsNavList>
 			<li><a class=inverseHover href=#>add new...</a></li>
 			</ul>
 		</li>
 		<li><h1>END AFFECTORS</h1>
-			<ul>
+			<ul id=endsNavList>
 			<li><a class=inverseHover href=#>add new...</a></li>
 			</ul>
 		</li>
@@ -40,7 +40,8 @@
 				<a href=# >File</a>
 				<div id=file-menu>
 				</div>
-			</div>
+				</div>
+				<span id=file-name></span>
 		</div>
 		<textarea id=code-area class=boxsizingBorder></textarea>
 
@@ -85,6 +86,5 @@
 </div>
 
 <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
-<script src="{{ url_for('static', filename='js/nav.js') }}"></script>
 
 </body>
